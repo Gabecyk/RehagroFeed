@@ -31,9 +31,9 @@ function Login() {
         <div className='formLogin'>
           <form action={handleSubmit}>
             <p>Email</p>
-            <input onChange={(e) => setEmil(e.target.value)} value={email} type="email" name="" id="" />
+            <input onChange={(e) => setEmil(e.target.value)} value={email} type="email" name="" id="" minlength="3" maxlength="30" required />
             <p>Senha</p>
-            <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" name="" id="" />
+            <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" name="" id="" minlength="3" maxlength="30" required />
             <br />
             <button type='submit'>Login</button>
           </form>
