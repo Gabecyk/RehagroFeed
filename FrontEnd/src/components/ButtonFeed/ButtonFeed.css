@@ -1,0 +1,13 @@
+.buttonFeed {
+    background: var(--green-500);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.buttonFeed:hover {
+    background: var(--green-600);
+}
+
+
