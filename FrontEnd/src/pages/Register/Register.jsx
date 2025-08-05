@@ -3,8 +3,10 @@ import { useState } from 'react'
 import './Register.css'
 import imgLogin from '../../assets/imageLogin.jpg'
 import LogoRehagro from '../../assets/LogoRehagro.png'
+import { Link } from 'react-router-dom';
 
 function Register() {
+
     const [name, setName] = useState('');
     const [email, setEmil] = useState('');
     const [password, setPassword] = useState('');
@@ -55,7 +57,7 @@ function Register() {
                         <br />
                         <button type='submit'>Registrar</button>
                     </form>
-                    <p className='oldLogin'>Você tem uma conta? <span>Login</span></p>
+                    <p className='oldLogin'>Você tem uma conta? <Link to={'/'}><span>Login</span></Link></p>
                 </div>
             </div>
         </div>

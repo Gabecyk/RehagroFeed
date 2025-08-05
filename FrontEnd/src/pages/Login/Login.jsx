@@ -3,12 +3,14 @@ import { useState } from 'react'
 import './Login.css'
 import imgLogin from '../../assets/imageLogin.jpg'
 import LogoRehagro from '../../assets/LogoRehagro.png'
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [email, setEmil] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // evita recarregar a página
     if(password.length < 1)
       alert('Digite a senha')
     if(email.length < 1)
@@ -29,7 +31,7 @@ function Login() {
         </div>
         <h1 className='h1LoginPage'>Login</h1>
         <div className='formLogin'>
-          <form action={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <p>Email</p>
             <input onChange={(e) => setEmil(e.target.value)} value={email} type="email" name="" id="" minlength="3" maxlength="30" required />
             <p>Senha</p>
@@ -37,7 +39,7 @@ function Login() {
             <br />
             <button type='submit'>Login</button>
           </form>
-          <p className='newRegister'>Não tem uma conta? <span>Registre-se</span></p>
+          <p className='newRegister'>Não tem uma conta? <Link to={'/register'}><span>Registre-se</span></Link></p>
         </div>
       </div>
     </div>
