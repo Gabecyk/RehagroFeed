@@ -1,0 +1,98 @@
+.BoxOutsideLogin {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.LeftLogin {
+    width: 30vw;
+    height: 90vh;
+}
+
+.imgLogin {
+    width: 80%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.RightLogin {
+    width: 50vw;
+    height: 90vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logoPng {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.h1LoginPage {
+    margin-top: 50px;
+    font-size: 40pt;
+    font-family: 'Roboto', sans-serif;
+    color: var(--gray-400);
+}
+
+.formLogin {
+    width: 40%;
+    margin: 60px auto;
+}
+
+.formLogin > form > p {
+    color: var(--gray-400);
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 15pt;
+    margin-bottom: 5px;
+}
+
+.formLogin > form > input {
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: var(--gray-700);
+    border-radius: 5pt;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-color: #0e231a00;
+}
+
+.formLogin > form > button {
+    margin-top: 15px;
+    background-color: #0E231A;
+    color: var(--gray-400);
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    height: 60px;
+    border-radius: 5pt;
+    font-size: 17pt;
+    border-color: #0e231a00;
+}
+
+.formLogin > form > button:hover {
+    background-color: #13291f;
+    cursor: pointer;
+}
+
+.formLogin > form > button:active {
+    background-color: #1a382b;
+}
+
+.newRegister {
+    margin-top: 25px;
+    color: var(--gray-400);
+}
+
+.newRegister > span {
+    color: white;
+    cursor: pointer;
+}
