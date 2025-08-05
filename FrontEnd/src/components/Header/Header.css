@@ -1,0 +1,18 @@
+.headerContainer {
+    background: var(--gray-800);
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+}
+
+.headerContainer img {
+    height: 2rem;
+}
+
+.headerIcons {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    color: var(--white);
+    cursor: pointer;
+}

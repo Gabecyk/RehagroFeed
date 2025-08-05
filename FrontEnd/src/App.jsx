@@ -1,7 +1,12 @@
-import './App.css'
+
 import ModalSettings from './components/ModalSettings/ModalSettings';
 import React, { useState } from 'react';
 import ModalSettingsWrapper from './components//ModalSettings/ModalSettingsWrapper';
+
+import './index.css'
+
+import { Header } from './components/Header/Header.jsx';
+
 function App() {
 const [showModal, setShowModal] = useState(false);
 
@@ -37,6 +42,14 @@ const [showModal, setShowModal] = useState(false);
 };
     
 
+<<<<<<< HEAD
+=======
+  return (
+    <>
+      <Header />
+    </>
+  )
+>>>>>>> dba7506dd1d70b5951d0bae77c5cf83ff5a10277
 }
 
 export default App
