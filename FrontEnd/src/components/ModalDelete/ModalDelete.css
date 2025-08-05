@@ -70,7 +70,7 @@
 
 .btn-delete {
   flex-shrink: 0;
- background: #25262B;
+  background: #25262B;
   color: #FF6B6B; /* vermelho claro para o texto */
   font-weight: 600;
   border-radius: 8px;
