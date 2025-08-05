@@ -1,5 +1,6 @@
 import React from 'react';
 import './ModalSettings.css';
+import { Link } from 'react-router-dom';
 
 const ModalSettings = ({ onLogout }) => {
   return (

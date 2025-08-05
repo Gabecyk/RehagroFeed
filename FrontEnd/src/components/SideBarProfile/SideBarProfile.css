@@ -1,0 +1,58 @@
+.sidebar-profile {
+  width: 311px;
+  height: 229px;
+  background-color: #121214;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.profile-header {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c); /* ajuste conforme imagem */
+}
+
+.profile-picture {
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  background-color: #29292e;
+  border: 2px solid #00B37E;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e1e1e6;
+}
+
+.profile-info {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  font-size: 14px;
+  color: #8D8D99;
+  margin-bottom: 8px;
+}
+
+.profile-date {
+  font-size: 13px;
+  color: #C4C4CC;
+}
