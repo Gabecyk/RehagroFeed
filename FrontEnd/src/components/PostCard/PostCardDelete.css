@@ -1,0 +1,82 @@
+.post-card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;           
+  margin: 20px auto;       
+  font-family: sans-serif;
+  max-width: 900px;         
+  width: 100%;
+  font-size: 15px;          
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar {
+  background-color: #333;
+  color: #fff;
+  width: 40px;            
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  border: 2px solid #00ff99;
+  font-size: 15px;          
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.user-info strong {
+  font-size: 14px;          /
+}
+
+.user-info span {
+  font-size: 12px;          
+  color: #aaa;
+}
+
+.published-time {
+  font-size: 12px;          
+  color: #aaa;
+  margin-right: 8px;
+}
+
+.delete-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.post-content {
+  margin-top: 12px;
+}
+
+.post-content p {
+  margin: 4px 0;
+  font-size: 14px;          
+}
+
+.post-footer {
+  margin-top: 12px;
+}
+
+.like-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 14px;          
+}
