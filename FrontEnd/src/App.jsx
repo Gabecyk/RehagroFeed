@@ -1,12 +1,10 @@
 import './index.css';
-import { Header } from './components/Header/Header.jsx';
-import PostCardDelete from './components/PostCard/PostCardDelete.jsx';
+import { Input } from './components/Input/Input';
 
 function App() {
   return (
     <>
-      <Header />
-      <PostCardDelete />
+      <Input/>
     </>
   );
 }

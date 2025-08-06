@@ -1,13 +1,20 @@
 .buttonFeed {
-    background: var(--green-500);
-    color: var(--white);
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.1s;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--green-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 .buttonFeed:hover {
-    background: var(--green-600);
+  background: var(--green-600);
 }
 
 

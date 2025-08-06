@@ -1,0 +1,39 @@
+.inputForm {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
+}
+
+.inputForm > strong {
+    line-height: 1.6;
+    color: var(--gray-100);
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.inputContainer textarea {
+  width: 100%;
+  background: #4B5563;
+  border: 0;
+  resize: none;
+  height: 6rem;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #C4C4CC;
+  line-height: 1.4;
+  margin-top: 1rem;
+  padding-right: 6rem;
+  box-sizing: border-box;
+}
+
+.inputForm footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
