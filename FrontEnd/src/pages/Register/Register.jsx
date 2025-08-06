@@ -4,6 +4,7 @@ import './Register.css'
 import imgLogin from '../../assets/imageLogin.jpg'
 import LogoRehagro from '../../assets/LogoRehagro.png'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Register() {
 
@@ -14,14 +15,28 @@ function Register() {
 
     const [msg, setMsg] = useState([]);
 
-    const handleSubmit = (event) => {
+
+    const handleSubmit = async (event) => {
         event.preventDefault(); // evita recarregar a página
         const messages = [];
 
-        if (password != confirmPassword) {messages.push('As senha não são parecidas!');}
-        else {messages.pop();}
+        if (password != confirmPassword) { messages.push('As senha não são parecidas!'); }
+        else { messages.pop(); }
 
         setMsg(messages); // atualiza o estado
+
+        try {
+            const response = await axios.post('http://127.0.0.1:8000/api/rf/register', {
+                email,
+                password,
+                name
+            });
+
+            alert(response.data.message);
+
+        } catch (err) {
+            alert('Registro falhou', err);
+        }
     };
 
 
