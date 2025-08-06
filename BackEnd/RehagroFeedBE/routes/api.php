@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\LoginJwtController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +18,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('/rf')->group(function() {
+
+    Route::post('/login', [LoginJwtController::class, 'login'])->name('login');
+    Route::post('/register', [UserController::class, 'store'])->name('register');
+    
+
+    Route::group(['middleware' => ['auth:api']], function() { //Rota protegida
+        Route::prefix('feed')->group(function(){
+
+            Route::post('/logout', [LoginJwtController::class, 'logout'])->name('logout');
+            Route::post('/delete', [UserController::class, 'destroy'])->name('delete');
+            Route::get('/', [UserController::class, 'index']);
+
+        });
+    });
+
 });
