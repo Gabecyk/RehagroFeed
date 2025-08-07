@@ -4,20 +4,24 @@ import './Profile.css'
 import Grid from '@mui/material/Grid'
 import PostCardDelete from '../../components/PostCard/PostCardDelete'
 import SidebarProfile from '../../components/SideBarProfile/SideBarProfile'
+import { Header } from '../../components/Header/Header'
 
 const Profile = () => {
   return (
-    <div className='profileContainer'>
-      <Grid container spacing={4} justifyContent="center">
-        <SidebarProfile />
-        <Grid>
-          <FormProfile />
+    <>
+      <Header/>
+      <div className='profileContainer'>
+        <Grid container spacing={4} justifyContent="center">
+          <SidebarProfile />
+          <Grid>
+            <FormProfile />
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid>
-        <PostCardDelete />
-      </Grid>
-    </div>
+        <Grid>
+          <PostCardDelete />
+        </Grid>
+      </div>
+    </>
   )
 }
 

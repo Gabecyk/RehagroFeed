@@ -3,9 +3,16 @@ import RehagroNameLogo from '../../assets/RehagroNameLogo.svg';
 import { List } from 'phosphor-react';
 import React, { useState } from 'react';
 import ModalSettingsWrapper from '../ModalSettings/ModalSettingsWrapper';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Header() {
   const [showSettings, setShowSettings] = useState(false);
+
+  const navigate = useNavigate();
+
+  function handleClick(){
+    navigate('/feed');
+  }
 
   const handleLogout = () => {
     console.log('Usuário deslogado!');
@@ -14,7 +21,7 @@ export function Header() {
 
   return (
     <header className="headerContainer">
-      <img src={RehagroNameLogo} alt="Logotipo do Rehagro" />
+      <img onClick={handleClick} src={RehagroNameLogo} alt="Logotipo do Rehagro" style={{cursor: 'pointer'}} />
 
       <div className="headerIcons" >
         <button
