@@ -20,9 +20,9 @@ const FormProfile = () => {
   }
 
   return (
-    <div className='container'>
-        <div className='header'>Editar Perfil</div>
-        <div className='form'>
+    <div className='formProfileContainer'>
+        <div className='formProfileHeader'>Editar Perfil</div>
+        <div className='formProfileForm'>
           <p>Nome</p>
           <input
             type='text'
@@ -38,7 +38,7 @@ const FormProfile = () => {
           />
         </div>
         <hr/>
-        <div className='password'>
+        <div className='formProfilePassword'>
           <p>Senha</p>
           <input type='password' placeholder='Nova senha' />
           <input type='password' placeholder='Confirmar senha' />
