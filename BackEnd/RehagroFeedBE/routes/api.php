@@ -22,6 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('/rf')->group(function() {
 
+    Route::middleware(['auth:api'])->get('/me', function (Request $request) {
+    return response()->json($request->user());
+});
     Route::post('/login', [LoginJwtController::class, 'login'])->name('login');
     Route::post('/register', [UserController::class, 'store'])->name('register');
     
