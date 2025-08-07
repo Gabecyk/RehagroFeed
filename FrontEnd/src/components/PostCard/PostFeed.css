@@ -38,7 +38,7 @@
 }
 
 .user-info strong {
-  font-size: 14px;          /
+  font-size: 14px;          
 }
 
 .user-info span {
@@ -50,14 +50,6 @@
   font-size: 12px;          
   color: #aaa;
   margin-right: 8px;
-}
-
-.delete-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  color: #aaa;
 }
 
 .post-content {
@@ -80,3 +72,5 @@
   color: #aaa;
   font-size: 14px;          
 }
+
+

@@ -4,17 +4,35 @@ import './Login.css'
 import imgLogin from '../../assets/imageLogin.jpg'
 import LogoRehagro from '../../assets/LogoRehagro.png'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+//import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmil] = useState('');
   const [password, setPassword] = useState('');
+   //const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault(); // evita recarregar a página
-    if(password.length < 1)
-      alert('Digite a senha')
-    if(email.length < 1)
-      alert('Digite o email')
+    
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/rf/login', {
+        email,
+        password
+      });
+
+      const token = response.data.token;
+
+      // Armazenar token no localStorage
+      localStorage.setItem('token', token);
+
+      // Redirecionar para rota protegida
+      alert('Logado com sucesso')
+      //navigate('/register');
+    } catch (err) {
+      alert('Login falhou');
+      console.log(err);
+    }
   }
 
 

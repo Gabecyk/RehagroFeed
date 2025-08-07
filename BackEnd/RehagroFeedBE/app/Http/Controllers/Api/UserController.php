@@ -45,7 +45,7 @@ class UserController extends Controller
             $user = $this->user->create($data);
 
             return response()->json([
-                'message' => 'Usuário registrado!'
+                'message' => 'Usuário registrado! Volte para a tela de login para logar.'
             ], 200);
 
         } catch (\Exception $ex) {

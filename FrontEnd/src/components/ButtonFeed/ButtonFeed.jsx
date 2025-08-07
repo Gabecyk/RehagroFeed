@@ -2,7 +2,7 @@ import './ButtonFeed.css';
 
 export function ButtonFeed() {
     return (
-        <button className='buttonFeed'>
+        <button type='submit' className='buttonFeed'>
             <span>Publicar</span>
         </button>
     );
