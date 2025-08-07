@@ -20,23 +20,21 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('/rf')->group(function() {
+Route::prefix('/rf')->group(function () {
 
-    Route::middleware(['auth:api'])->get('/me', function (Request $request) {
-    return response()->json($request->user());
-});
+    Route::middleware(['auth:api'])->get('/me', function (Request $request) { //rota JWT autenticar
+        return response()->json($request->user());
+    });
     Route::post('/login', [LoginJwtController::class, 'login'])->name('login');
     Route::post('/register', [UserController::class, 'store'])->name('register');
-    
 
-    Route::group(['middleware' => ['auth:api']], function() { //Rota protegida
-        Route::prefix('feed')->group(function(){
+
+    Route::group(['middleware' => ['auth:api']], function () { //Rotas protegidas aqui dentro
+        Route::prefix('feed')->group(function () {
 
             Route::post('/logout', [LoginJwtController::class, 'logout'])->name('logout');
             Route::post('/delete', [UserController::class, 'destroy'])->name('delete');
             Route::get('/', [UserController::class, 'index']);
-
         });
     });
-
 });
