@@ -1,10 +1,11 @@
 import './index.css';
-import { Input } from './components/Input/Input';
+import Feed from './pages/Feed/Feed'
 
 function App() {
   return (
     <>
-      <Input/>
+      <Feed/>
+
     </>
   );
 }
